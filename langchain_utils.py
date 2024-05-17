@@ -53,9 +53,9 @@ def get_conversational_chain(GROQ_API_KEY):
 
     return chain
 
-def user_input(user_question,GROQ_API_KEY):
+def user_input(user_question,GROQ_API_KEY,GOOGLEPALM_API_KEY):
     load_dotenv()
-    embeddings = GooglePalmEmbeddings(google_api_key=os.getenv('GOOGLEPALM_API_KEY'))
+    embeddings = GooglePalmEmbeddings(google_api_key=GOOGLEPALM_API_KEY)
     
     new_db = FAISS.load_local("faiss_index", embeddings,allow_dangerous_deserialization=True)
     docs = new_db.similarity_search(user_question,k=2)

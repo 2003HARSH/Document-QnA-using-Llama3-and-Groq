@@ -5,17 +5,18 @@ st.set_page_config(page_icon='📚',
                    page_title="Document📃 QnA🙋‍♂️ using Groq",                  
 )
 
-GOOGLEPALM_API_KEY=st.secrets['google_palm']
-GROQ_API_KEY=st.secrets['groq_api']
+GOOGLEPALM_API_KEY=st.secrets['GOOGLEPALM_API_KEY']
+GROQ_API_KEY=st.secrets['GROQ_API_KEY']
 
 def main():
     st.header("Document📃 QnA💁 using Llama3 and Groq⏩")
-
+    st.write("Please don't❌ upload any private Documents...")
+    st.markdown("""---""")
     user_question = st.text_input("Ask a Question from the PDF Files")
 
-    if user_question:
-        if st.button('Generate Answer'):
-            output=user_input(user_question,GROQ_API_KEY)
+    if st.button('Generate Answer'):
+        if user_question:
+            output=user_input(user_question,GROQ_API_KEY,GOOGLEPALM_API_KEY)
             st.write(output[0])
             document=output[1]
             for i in range(len(document)):
