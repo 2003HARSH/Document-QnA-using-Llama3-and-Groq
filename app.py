@@ -5,8 +5,8 @@ st.set_page_config(page_icon='📚',
                    page_title="Document📃 QnA🙋‍♂️ using Groq",                  
 )
 
-GOOGLEPALM_API_KEY=st.secrets['GOOGLEPALM_API_KEY']
-GROQ_API_KEY=st.secrets['GROQ_API_KEY']
+GOOGLEPALM_API_KEY=st.secrets['google_palm']
+GROQ_API_KEY=st.secrets['groq_api']
 
 def main():
     st.header("Document📃 QnA💁 using Llama3 and Groq⏩")
