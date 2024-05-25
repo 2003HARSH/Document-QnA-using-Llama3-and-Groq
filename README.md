@@ -2,6 +2,8 @@
 
 Welcome to the **Document QnA** project! This project leverages the power of Llama3 and Groq API, integrated with LangChain, FAISS, Google Palm Embeddings, and deployed on Streamlit, to provide an interactive question-and-answer system based on document content.
 
+![](https://github.com/2003HARSH/Document-QnA-using-Llama3-and-Groq/blob/main/docs/static/docqna.png)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
